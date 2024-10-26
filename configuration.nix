@@ -85,6 +85,7 @@
     isNormalUser = true;
     description = "Poularde";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       lshw
       brave
@@ -149,6 +150,21 @@
   package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  # ZSH
+  programs = {
+    zsh = {
+      enable = true;
+      ohMyZsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [
+          "git"
+          "systemadmin"
+        ];
+      };
+    };
+  };
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
