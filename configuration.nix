@@ -104,8 +104,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    gnome3.gnome-tweaks
-    gnome3.gnome-shell-extensions
+    gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
   ];
 
   # Steam
