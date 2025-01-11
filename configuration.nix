@@ -60,13 +60,13 @@
   };
 
   # Configure console keymap
-  console.keyMap = "dvorak";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = false;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -112,6 +112,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    mpv
+    steamtinkerlaunch
     #gnome-tweaks
     #gnome-shell-extensions
   ];
@@ -175,6 +177,7 @@
       };
     };
   };
+
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -202,5 +205,12 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
+  
+  # Garbage colelctor to cleanup old generations
+  nix.gc = {
+  automatic = true;
+  persistent = true;
+  dates = "21:00:00";  # Schedule garbage collection at 5 AM
+  options = "--delete-older-than 30d";  # Delete generations older than 7 days
+  };
 }
