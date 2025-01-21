@@ -206,6 +206,9 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
   
+  #Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Garbage colelctor to cleanup old generations
   nix.gc = {
   automatic = true;
