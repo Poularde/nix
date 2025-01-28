@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, home-manager, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      home-manager/nixos
     ];
 
   # Bootloader.
@@ -102,12 +103,14 @@
       vscode
       discord
     ];
+  };
+  home-manager.users.poularde = { pkgs, ... }: {
+    # home.packages = [ pkgs.atool pkgs.httpie ];
     programs.ssh = {
       startAgent = true;
       addKeysToAgent = "yes";
     };
   };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
