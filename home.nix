@@ -54,6 +54,13 @@
   programs.ssh = {
     startAgent = true;
     addKeysToAgent = "yes";
+    extraConfig = "
+      Host github
+      AddKeysToAgent yes
+      Hostname github.com
+      IdentitiesOnly yes
+      IdentityFile  "/home/poularde/.ssh/git"
+    ";
   };
 
   # Nicely reload system units when changing configs
