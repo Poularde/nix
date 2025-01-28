@@ -51,6 +51,10 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  programs.ssh = {
+    startAgent = true;
+    addKeysToAgent = "yes";
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
@@ -60,8 +64,5 @@
 }
 # home-manager.users.poularde = { pkgs, ... }: {
 #     # home.packages = [ pkgs.atool pkgs.httpie ];
-#     programs.ssh = {
-#       startAgent = true;
-#       addKeysToAgent = "yes";
-#     };
+#     
 # }
