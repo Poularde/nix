@@ -102,6 +102,10 @@
       vscode
       discord
     ];
+    programs.ssh = {
+      startAgent = true;
+      addKeysToAgent = "yes";
+    };
   };
 
   # Allow unfree packages
@@ -191,7 +195,6 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  programs.ssh.startAgent = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
