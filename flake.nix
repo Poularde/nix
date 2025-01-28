@@ -12,23 +12,29 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: 
     let
+      inherit (self) outputs;
       system = "x86_64-linux";
     in
     {
       nixosConfigurations.garuda = nixpkgs.lib.nixosSystem {
         # Set all inputs parameters as special arguments for all submodules,
         # so you can directly use all dependencies in inputs in submodules
-        specialArgs = { inherit system inputs; };
+        specialArgs = { inherit system inputs outputs; };
         modules = [
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
           ./configuration.nix
         ];
       };
-      homeConfigurations = (
-        import ./home-manager.nix {
-          inherit system nixpkgs home-manager;
-        }
-      );
+      homeConfigurations = {
+        "poularde@garuda" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          extraSpecialArgs = {inherit inputs outputs;};
+          modules = [
+            # > Our main home-manager configuration file <
+            ./home.nix
+          ];
+        };
+      };
     };
 }
