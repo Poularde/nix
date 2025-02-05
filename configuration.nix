@@ -116,6 +116,7 @@
     wget
     mpv
     steamtinkerlaunch
+    lutris
     #gnome-tweaks
     #gnome-shell-extensions
   ];
