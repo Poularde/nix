@@ -104,6 +104,7 @@
       git
       vscode
       discord
+      wowup-cf
     ];
   };
   # Allow unfree packages
