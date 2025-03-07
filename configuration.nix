@@ -48,9 +48,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  packages = with pkgs; [
-    gnome-tweaks
-  ];
 
   # Enable KDE
   # services.displayManager.sddm.enable = true;
@@ -121,8 +118,8 @@
     mpv
     steamtinkerlaunch
     lutris
-    #gnome-tweaks
-    #gnome-shell-extensions
+    gnome-tweaks
+    gnome-shell-extensions
   ];
 
   # Steam
