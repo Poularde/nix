@@ -129,6 +129,8 @@
     lutris
     gnome-tweaks
     gnome-shell-extensions
+    libva-utils
+    libvdpau
   ];
 
   # Steam
@@ -140,13 +142,24 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  #AppImage for Shadow
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+  };
+
   # Nvidia GPU
   boot.kernelParams = [
     "initcall_blacklist=simpledrm_platform_driver_init"
   ];
   # Enable OpenGL
   hardware.graphics = {
-   enable = true;
+    enable = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+      nvidia-vaapi-driver
+    ];
   };
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];

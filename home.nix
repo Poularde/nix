@@ -61,17 +61,8 @@
       IdentitiesOnly yes
       IdentityFile  "/home/poularde/.ssh/git"
     ";
-  };
-  {
-    imports = [
-      (fetchGit { url = "https://github.com/NicolasGuilloux/shadow-nix"; ref = "v1.0.3"; } + "/import/home-manager.nix")
-    ];
-    programs.shadow-client = {
-    # Enabled by default when using import
-    # enable = true;
-    channel = "preprod";
-    };
-  }
+  };s
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
