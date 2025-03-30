@@ -63,7 +63,7 @@
   services.desktopManager.plasma6.enable = true;
 
   # HDR things
-  chaotic.mesa-git.enable = true;
+  #chaotic.mesa-git.enable = true;
   #chaotic.linux_hdr.specialisation.enable = true;
 
   # Configure keymap in X11
