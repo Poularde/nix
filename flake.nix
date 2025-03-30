@@ -4,13 +4,14 @@
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager = {
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, chaotic, home-manager, ... }@inputs: 
     let
       inherit (self) outputs;
       system = "x86_64-linux";
@@ -24,6 +25,7 @@
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
           ./configuration.nix
+          chaotic.nixosModules.default
         ];
       };
       homeConfigurations = {
