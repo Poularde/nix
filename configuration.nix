@@ -63,8 +63,6 @@
   services.desktopManager.plasma6.enable = true;
 
   # HDR things
-  #chaotic.mesa-git.enable = true;
-  #chaotic.linux_hdr.specialisation.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -135,7 +133,15 @@
     gnome-shell-extensions
     libva-utils
     libvdpau
+    vkbasalt
+    dxvk
   ];
+
+  # Gamescope
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
 
   # Steam
   programs.steam = {
