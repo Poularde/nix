@@ -62,8 +62,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # HDR things
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -135,13 +133,10 @@
     libvdpau
     vkbasalt
     dxvk
+    proton-ge-custom
+    vulkanPackages_latest.vulkan-extension-layer
+    vulkanPackages_latest.vulkan-headers
   ];
-
-  # Gamescope
-  programs.gamescope = {
-    enable = true;
-    capSysNice = true;
-  };
 
   # Steam
   programs.steam = {
