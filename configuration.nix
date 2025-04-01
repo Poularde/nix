@@ -49,6 +49,7 @@
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   # services.colord.enable = true;
+  #gnomeExtensions.hdr-auto-enable
   # services.xserver.displayManager.gdm.wayland = true;
   # environment.sessionVariables = {
   #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
