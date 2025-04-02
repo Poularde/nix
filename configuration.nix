@@ -49,15 +49,10 @@
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   # services.colord.enable = true;
-  #gnomeExtensions.hdr-auto-enable
   # services.xserver.displayManager.gdm.wayland = true;
   # environment.sessionVariables = {
   #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
   # };
-  # # Set up an HDR-capable monitor profile (replace with your actual profile)
-  # services.udev.extraRules = ''
-  #   ACTION=="add", SUBSYSTEM=="drm", KERNEL=="card*", RUN+="${pkgs.coreutils}/bin/echo high > /sys/class/drm/card0/device/power_dpm_force_performance_level"
-  # '';
   
   # Enable KDE
   services.displayManager.sddm.enable = true;
