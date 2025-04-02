@@ -137,6 +137,7 @@
     proton-ge-custom
     vulkanPackages_latest.vulkan-extension-layer
     vulkanPackages_latest.vulkan-headers
+    gamescope-wsi
   ];
 
   # Steam
