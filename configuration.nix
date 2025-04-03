@@ -242,7 +242,7 @@
   nix.gc = {
   automatic = true;
   persistent = true;
-  dates = "21:00:00";  # Schedule garbage collection at 5 AM
+  dates = "22:00:00";  # Schedule garbage collection at 5 AM
   options = "--delete-older-than 30d";  # Delete generations older than 7 days
   };
 }
