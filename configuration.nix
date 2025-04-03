@@ -124,8 +124,8 @@
     mpv
     steamtinkerlaunch
     lutris
-    gnome-tweaks
-    gnome-shell-extensions
+    #gnome-tweaks
+    #gnome-shell-extensions
     libva-utils
     libvdpau
     vkbasalt
@@ -134,6 +134,7 @@
     vulkanPackages_latest.vulkan-extension-layer
     vulkanPackages_latest.vulkan-headers
     gamescope-wsi
+    kdePackages.kdeplasma-addons
   ];
 
   # Steam
