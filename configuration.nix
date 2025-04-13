@@ -130,9 +130,9 @@
     libvdpau
     vkbasalt
     dxvk
-    proton-ge-custom
-    vulkanPackages_latest.vulkan-extension-layer
-    vulkanPackages_latest.vulkan-headers
+#    proton-ge-custom
+#    vulkanPackages_latest.vulkan-extension-layer
+#    vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
   ];
@@ -157,14 +157,14 @@
     "initcall_blacklist=simpledrm_platform_driver_init"
   ];
   # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      vaapiVdpau
-      libvdpau-va-gl
-      nvidia-vaapi-driver
-    ];
-  };
+ # hardware.graphics = {
+  #  enable = true;
+   # extraPackages = with pkgs; [
+    #  vaapiVdpau
+     # libvdpau-va-gl
+      #nvidia-vaapi-driver
+   # ];
+ # };
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
