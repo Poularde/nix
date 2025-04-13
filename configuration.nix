@@ -147,6 +147,9 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  # UDEV rules for OpenRGB
+  services.hardware.openrgb.enable = true;
+  
   #AppImage for Shadow
   programs.appimage = {
   enable = true;
