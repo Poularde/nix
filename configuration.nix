@@ -130,9 +130,9 @@
     libvdpau
     vkbasalt
     dxvk
-#    proton-ge-custom
-#    vulkanPackages_latest.vulkan-extension-layer
-#    vulkanPackages_latest.vulkan-headers
+    proton-ge-custom
+    vulkanPackages_latest.vulkan-extension-layer
+    vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
   ];
