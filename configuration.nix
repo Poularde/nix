@@ -111,6 +111,7 @@
       vscode
       discord
       wowup-cf
+      openrgb
     ];
   };
   # Allow unfree packages
@@ -157,14 +158,14 @@
     "initcall_blacklist=simpledrm_platform_driver_init"
   ];
   # Enable OpenGL
- # hardware.graphics = {
-  #  enable = true;
-   # extraPackages = with pkgs; [
-    #  vaapiVdpau
-     # libvdpau-va-gl
-      #nvidia-vaapi-driver
-   # ];
- # };
+  hardware.graphics = {
+   enable = true;
+   extraPackages = with pkgs; [
+     vaapiVdpau
+     libvdpau-va-gl
+      nvidia-vaapi-driver
+   ];
+  };
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
