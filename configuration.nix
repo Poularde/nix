@@ -136,7 +136,6 @@
     vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
-    lm_sensors
   ];
 
   # Steam
