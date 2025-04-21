@@ -244,7 +244,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # TeamViewer
-  services.teamviewer.enable = true;
+  #services.teamviewer.enable = true;
 
   # Garbage colelctor to cleanup old generations
   nix.gc = {
