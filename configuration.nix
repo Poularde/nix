@@ -132,6 +132,9 @@
     vkbasalt
     dxvk
     proton-ge-custom
+    protonplus
+    protontricks
+    protonup-qt
     vulkanPackages_latest.vulkan-extension-layer
     vulkanPackages_latest.vulkan-headers
     gamescope-wsi
