@@ -122,8 +122,6 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    mpv
-    steamtinkerlaunch
     lutris
     #gnome-tweaks
     #gnome-shell-extensions
@@ -131,10 +129,8 @@
     libvdpau
     vkbasalt
     dxvk
-    proton-ge-custom
     protonplus
     protontricks
-    protonup-qt
     #vulkanPackages_latest.vulkan-extension-layer
     #vulkanPackages_latest.vulkan-headers
     gamescope-wsi
@@ -152,12 +148,6 @@
 
   # UDEV rules for OpenRGB
   services.hardware.openrgb.enable = true;
-  
-  #AppImage for Shadow
-  programs.appimage = {
-  enable = true;
-  binfmt = true;
-  };
 
   # Nvidia GPU
   boot.kernelParams = [
