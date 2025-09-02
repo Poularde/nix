@@ -71,6 +71,9 @@
   # services.displayManager.sddm.enable = true;
   # services.desktopManager.plasma6.enable = true;
   # programs.partition-manager.enable = true;
+  # Enable Bluetooth (KDE)
+  # hardware.bluetooth.enable = true; # enables support for Bluetooth
+  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -99,10 +102,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable Bluetooth (KDE)
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -136,8 +135,8 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     lutris
-    #gnome-tweaks
-    #gnome-shell-extensions
+    gnome-tweaks
+    gnome-shell-extensions
     libva-utils
     libvdpau
     vkbasalt
