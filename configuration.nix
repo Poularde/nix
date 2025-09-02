@@ -45,22 +45,22 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment with HDR
+  # # Enable the GNOME Desktop Environment with HDR
   # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
-  # #services.displayManager.gdm.wayland = true;
-  # # services.colord.enable = true;
-  # # environment.sessionVariables = {
-  # #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
-  # # };
+  # services.displayManager.gdm.wayland = true;
+  # services.colord.enable = true;
+  # environment.sessionVariables = {
+  #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
+  # };
   # programs.dconf.profiles.user.databases = [
   #   {
   #     settings = {
   #       "org/gnome/mutter" = {
   #         experimental-features = [
-  #           #"scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
+  #           "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
   #           "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
-  #           #"xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
+  #           "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
   #         ];
   #       };
   #     };
@@ -169,8 +169,8 @@
   hardware.graphics = {
    enable = true;
    extraPackages = with pkgs; [
-     vaapiVdpau
-     libvdpau-va-gl
+      vaapiVdpau
+      libvdpau-va-gl
       nvidia-vaapi-driver
    ];
   };
