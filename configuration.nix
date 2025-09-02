@@ -46,10 +46,10 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment with HDR
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.wayland = true;
   services.colord.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
   environment.sessionVariables = {
     MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
   };
@@ -137,7 +137,7 @@
     lutris
     gnome-tweaks
     gnome-shell-extensions
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     libva-utils
     libvdpau
     vkbasalt
