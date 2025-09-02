@@ -47,8 +47,8 @@
 
   # # Enable the GNOME Desktop Environment with HDR
   # services.displayManager.gdm.enable = true;
-  # services.desktopManager.gnome.enable = true;
   # services.displayManager.gdm.wayland = true;
+  # services.desktopManager.gnome.enable = true;
   # services.colord.enable = true;
   # environment.sessionVariables = {
   #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
@@ -135,8 +135,8 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     lutris
-    gnome-tweaks
-    gnome-shell-extensions
+    # gnome-tweaks
+    # gnome-shell-extensions
     libva-utils
     libvdpau
     vkbasalt
