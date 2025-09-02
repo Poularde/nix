@@ -56,6 +56,7 @@
   programs.dconf.profiles.user.databases = [
     {
       settings = {
+        "org/gnome/desktop/interface".cursor-theme = "Adwaita";
         "org/gnome/mutter" = {
           experimental-features = [
             "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
