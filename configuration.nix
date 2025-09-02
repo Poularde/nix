@@ -46,18 +46,31 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment with HDR
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-  # services.colord.enable = true;
-  # services.xserver.displayManager.gdm.wayland = true;
-  # environment.sessionVariables = {
-  #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
-  # };
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  services.colord.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
+  environment.sessionVariables = {
+    MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
+  };
+  programs.dconf.profiles.user.databases = [
+    {
+      settings = {
+        "org/gnome/mutter" = {
+          experimental-features = [
+            "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
+            "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
+            "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
+          ];
+        };
+      };
+    }
+  ];
   
   # Enable KDE
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  programs.partition-manager.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+  # programs.partition-manager.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -88,8 +101,8 @@
   };
 
   # Enable Bluetooth (KDE)
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  # hardware.bluetooth.enable = true; # enables support for Bluetooth
+  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
