@@ -143,8 +143,8 @@
     dxvk
     protonplus
     protontricks
-    vulkanPackages_latest.vulkan-extension-layer
-    vulkanPackages_latest.vulkan-headers
+    # vulkanPackages_latest.vulkan-extension-layer
+    # vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
   ];
