@@ -56,12 +56,11 @@
   programs.dconf.profiles.user.databases = [
     {
       settings = {
-        "org/gnome/desktop/interface".cursor-theme = "Adwaita";
         "org/gnome/mutter" = {
           experimental-features = [
-            "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
+            #"scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
             "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
-            "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
+            #"xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
           ];
         };
       };
@@ -138,7 +137,6 @@
     lutris
     gnome-tweaks
     gnome-shell-extensions
-    adwaita-icon-theme
     libva-utils
     libvdpau
     vkbasalt
@@ -148,7 +146,7 @@
     #vulkanPackages_latest.vulkan-extension-layer
     #vulkanPackages_latest.vulkan-headers
     gamescope-wsi
-    kdePackages.kdeplasma-addons
+    #kdePackages.kdeplasma-addons
   ];
 
   # Steam
