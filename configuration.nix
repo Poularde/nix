@@ -113,7 +113,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDViNacBLN5L3mBng9DYfaLiBsCWYwNLsd8D7Ut7Bv4P poularde@nixos"
     ];
     description = "Poularde";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       lshw
