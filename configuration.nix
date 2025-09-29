@@ -71,6 +71,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.partition-manager.enable = true;
+  kdePackages.korganizer.enable = true;
   # Enable Bluetooth (KDE)
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
