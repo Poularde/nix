@@ -42,6 +42,9 @@
   home = {
     username = "poularde";
     homeDirectory = "/home/poularde";
+    files = {
+      ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+    };
   };
 
   # Add stuff for your user as you see fit:
