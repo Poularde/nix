@@ -42,7 +42,7 @@
   home = {
     username = "poularde";
     homeDirectory = "/home/poularde";
-    files = {
+    file = {
       ".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
     };
   };
