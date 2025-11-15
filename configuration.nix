@@ -139,7 +139,7 @@
     cmake
     gnome-tweaks
     gnome-shell-extensions
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     libva-utils
     libvdpau
     vkbasalt
