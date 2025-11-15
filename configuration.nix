@@ -209,9 +209,7 @@
   # accessible via `nvidia-settings`.
   nvidiaSettings = true;
   # Optionally, you may need to select the appropriate driver version for your specific GPU.
-  package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-    version = "580.65.06";
-  };
+  package = config.boot.kernelPackages.nvidiaPackages.production;
   };
 
   # ZSH
