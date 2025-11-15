@@ -146,7 +146,6 @@
     protontricks
     # vulkanPackages_latest.vulkan-extension-layer
     # vulkanPackages_latest.vulkan-headers
-    gamescope
     gamescope-wsi
     kdePackages.kdeplasma-addons
     kdePackages.korganizer
