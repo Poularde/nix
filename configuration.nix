@@ -212,6 +212,7 @@
   package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     version = "580.65.06";
   };
+  };
 
   # ZSH
   programs = {
