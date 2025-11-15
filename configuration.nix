@@ -142,6 +142,7 @@
     libvdpau
     vkbasalt
     dxvk
+    vulkan-hdr-layer-kwin6
     protonplus
     protontricks
     # vulkanPackages_latest.vulkan-extension-layer
