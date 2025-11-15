@@ -63,6 +63,12 @@
     ";
   };s
 
+  xsession.pointerCursor = {
+    name = "Adwaita";
+    package = pkgs.gnome.adwaita-icon-theme;
+    size = 32;
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
