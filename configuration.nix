@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, home-manager, chaotic, lib, ... }:
+{ config, pkgs, inputs, home-manager, chaotic, ... }:
 
 {
   imports =
@@ -211,11 +211,11 @@
   # Optionally, you may need to select the appropriate driver version for your specific GPU.
   package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     version = "580.82.09";
-    sha256_64bit = "lib.fakeSha256";
-    sha256_aarch64 = "lib.fakeSha256";
-    openSha256 = "lib.fakeSha256";
-    settingsSha256 = "lib.fakeSha256";
-    persistencedSha256 = "lib.fakeSha256";
+    sha256_64bit = "";
+    sha256_aarch64 = "";
+    openSha256 = "";
+    settingsSha256 = "";
+    persistencedSha256 = "";
     }; 
   };
 
