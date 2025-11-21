@@ -211,7 +211,7 @@
   # Optionally, you may need to select the appropriate driver version for your specific GPU.
   package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     version = "580.82.09";
-    sha256_64bit = "";
+    sha256_64bit = "sha256-um53cr2Xo90VhZM1bM2CH4q9b/1W2YOqUcvXPV6uw2s=";
     sha256_aarch64 = "";
     openSha256 = "";
     settingsSha256 = "";
