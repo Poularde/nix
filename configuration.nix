@@ -217,7 +217,7 @@
   #   settingsSha256 = "sha256-um53cr2Xo90VhZM1bM2CH4q9b/1W2YOqUcvXPV6uw2s=";
   #   persistencedSha256 = "";
   #   };
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest; # Same as production 
+  package = config.boot.kernelPackages.nvidiaPackages.latest; # Same as production 
   };
 
   # ZSH
