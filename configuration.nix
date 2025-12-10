@@ -15,8 +15,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Linux Kernel
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12.56"; }; });
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override { argsOverride = { version = "6.12.56"; }; });
 
   networking.hostName = "garuda"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
