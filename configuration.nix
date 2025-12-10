@@ -16,14 +16,14 @@
 
   # Linux Kernel
   #boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_11.override {
+  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_12.override {
     argsOverride = rec {
       src = pkgs.fetchurl {
         url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
         sha256 = "900d567ff01824708ce24c3b37faaef03e6f6145411dd447a6ff2edc8c5db3a9";
       };
-      version = "6.11.0";
-      modDirVersion = "6.11.0";
+      version = "6.12.0";
+      modDirVersion = "6.12.0";
     };
   });
 
