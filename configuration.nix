@@ -16,7 +16,7 @@
 
   # Linux Kernel
   #boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_10.override { argsOverride = { version = "6.10.0"; }; });
+  boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_10override { argsOverride = { version = "6.1.0"; }; });
 
   networking.hostName = "garuda"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
