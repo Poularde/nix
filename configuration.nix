@@ -51,9 +51,9 @@
 
   # Enable the GNOME Desktop Environment with HDR
   services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
+  # services.displayManager.gdm.wayland = true;
   services.desktopManager.gnome.enable = true;
-  services.colord.enable = true;
+  # services.colord.enable = true;
   # environment.sessionVariables = {
   #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
   # };
