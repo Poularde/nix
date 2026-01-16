@@ -154,15 +154,10 @@
     # kdePackages.kdeplasma-addons
     # kdePackages.korganizer
     usbutils
+    winetricks
+    wineWowPackages.stagingFull
   ];
-  environment.systemPackages = [
-    (pkgs.unstable.lutris.override {
-      extraPkgs = pkgs: [
-        pkgs.wineWowPackages.stagingFull
-        pkgs.winetricks
-      ];
-    })
-  ];
+  
   # Steam
   programs.steam = {
     enable = true;
