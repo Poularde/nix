@@ -49,35 +49,35 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment with HDR
-  services.displayManager.gdm.enable = true;
-  # services.displayManager.gdm.wayland = true;
-  services.desktopManager.gnome.enable = true;
-  # services.colord.enable = true;
-  # environment.sessionVariables = {
-  #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
-  # };
-  programs.dconf.profiles.user.databases = [
-    {
-      settings = {
-        "org/gnome/mutter" = {
-          experimental-features = [
-            "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
-            "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
-            "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
-          ];
-        };
-      };
-    }
-  ];
+  # # Enable the GNOME Desktop Environment with HDR
+  # services.displayManager.gdm.enable = true;
+  # # services.displayManager.gdm.wayland = true;
+  # services.desktopManager.gnome.enable = true;
+  # # services.colord.enable = true;
+  # # environment.sessionVariables = {
+  # #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
+  # # };
+  # programs.dconf.profiles.user.databases = [
+  #   {
+  #     settings = {
+  #       "org/gnome/mutter" = {
+  #         experimental-features = [
+  #           "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
+  #           "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
+  #           "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
+  #         ];
+  #       };
+  #     };
+  #   }
+  # ];
   
-  # # Enable KDE
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # programs.partition-manager.enable = true;
-  # # Enable Bluetooth (KDE)
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  # Enable KDE
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.partition-manager.enable = true;
+  # Enable Bluetooth (KDE)
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -140,8 +140,8 @@
     wget
     lutris
     cmake
-    gnome-tweaks
-    gnome-shell-extensions
+    # gnome-tweaks
+    # gnome-shell-extensions
     libva-utils
     libvdpau
     vkbasalt
@@ -151,11 +151,11 @@
     # vulkanPackages_latest.vulkan-extension-layer
     # vulkanPackages_latest.vulkan-headers
     gamescope-wsi
-    # kdePackages.kdeplasma-addons
-    # kdePackages.korganizer
-    usbutils
-    winetricks
-    wineWowPackages.stagingFull
+    kdePackages.kdeplasma-addons
+    kdePackages.korganizer
+    # usbutils
+    # winetricks
+    # wineWowPackages.stagingFull
   ];
   
   # Steam
@@ -167,11 +167,11 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  # Gamescope
-  programs.gamescope = {
-    enable = true;
-    capSysNice = false;
-  };
+  # # Gamescope
+  # programs.gamescope = {
+  #   enable = true;
+  #   capSysNice = false;
+  # };
 
   # AppImage support
   programs.appimage = {
