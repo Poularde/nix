@@ -71,14 +71,13 @@
   #   }
   # ];
   
-  # # Enable KDE
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # programs.partition-manager.enable = true;
-  # # Enable Bluetooth (KDE)
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  programs.hyprland.enable = true;
+  # Enable KDE
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.partition-manager.enable = true;
+  # Enable Bluetooth (KDE)
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -152,12 +151,10 @@
     # vulkanPackages_latest.vulkan-extension-layer
     # vulkanPackages_latest.vulkan-headers
     gamescope-wsi
-    # kdePackages.kdeplasma-addons
-    # kdePackages.korganizer
+    kdePackages.kdeplasma-addons
     # usbutils
     # winetricks
     # wineWowPackages.stagingFull
-    kitty
   ];
   
   # Steam
