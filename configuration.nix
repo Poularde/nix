@@ -165,6 +165,12 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+  # Gamescope
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false;
+  };
+
   # AppImage support
   programs.appimage = {
     enable = true;
