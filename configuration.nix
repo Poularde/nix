@@ -152,7 +152,6 @@
     # vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
-    steam-link
     # usbutils
     # winetricks
     # wineWowPackages.stagingFull
