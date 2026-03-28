@@ -49,11 +49,11 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment with HDR
-  services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
-  services.desktopManager.gnome.enable = true;
-  services.colord.enable = true;
+  # # Enable the GNOME Desktop Environment with HDR
+  # services.displayManager.gdm.enable = true;
+  # services.displayManager.gdm.wayland = true;
+  # services.desktopManager.gnome.enable = true;
+  # services.colord.enable = true;
   # # environment.sessionVariables = {
   # #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
   # # };
@@ -71,13 +71,13 @@
   #   }
   # ];
   
-  # # Enable KDE
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # programs.partition-manager.enable = true;
-  # # Enable Bluetooth (KDE)
-  # hardware.bluetooth.enable = true; # enables support for Bluetooth
-  # hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  # Enable KDE
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.partition-manager.enable = true;
+  # Enable Bluetooth (KDE)
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -140,8 +140,7 @@
     wget
     lutris
     cmake
-    gnome-tweaks
-    gnome-shell-extensions
+    # gnome67
     libva-utils
     libvdpau
     vkbasalt
