@@ -152,8 +152,8 @@
     gamescope-wsi
     kdePackages.kdeplasma-addons
     # usbutils
-    # winetricks
-    # wineWowPackages.stagingFull
+    winetricks
+    wineWow64Packages.waylandFull
   ];
   
   # Steam
