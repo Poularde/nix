@@ -155,6 +155,7 @@
     # usbutils
     winetricks
     wineWow64Packages.waylandFull
+    openldap
   ];
   
   # Steam
