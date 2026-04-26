@@ -120,14 +120,9 @@
     extraGroups = [ "networkmanager" "wheel" "dialout" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      lshw
-      brave
       htop
       git
       vscode
-      discord
-      wowup-cf
-      openrgb
     ];
   };
   # Allow unfree packages
@@ -138,8 +133,13 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    lshw
+    brave
     lutris
     cmake
+    discord
+    wowup-cf
+    openrgb
     rclone
     # gnome67
     libva-utils
@@ -155,7 +155,7 @@
     # usbutils
     winetricks
     wineWow64Packages.waylandFull
-    openldap
+    qbz
   ];
   
   # Steam
