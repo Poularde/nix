@@ -135,7 +135,7 @@
     wget
     lshw
     brave
-    #lutris
+    lutris
     cmake
     discord
     wowup-cf
