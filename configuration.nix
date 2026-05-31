@@ -118,6 +118,8 @@
     wget
     lshw
     brave
+    gdctl
+    jq
     #lutris
     cmake
     discord
@@ -138,8 +140,6 @@
     qbz
     gnome-tweaks
     inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
-    gdctl
-    jq
   ];
   
   # Steam
