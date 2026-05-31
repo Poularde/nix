@@ -118,7 +118,6 @@
     wget
     lshw
     brave
-    jq
     #lutris
     cmake
     discord
@@ -139,6 +138,8 @@
     qbz
     gnome-tweaks
     inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
+    jq
+    mutter
   ];
   
   # Steam
