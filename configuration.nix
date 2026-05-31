@@ -118,7 +118,6 @@
     wget
     lshw
     brave
-    gdctl
     jq
     #lutris
     cmake
