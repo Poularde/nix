@@ -49,26 +49,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment with HDR
+  # Enable the GNOME Desktop Environment
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   services.colord.enable = true;
-  # environment.sessionVariables = {
-  #   MUTTER_DEBUG_ENABLE_HARDWARE_HDR = "1";
-  # };
-  # programs.dconf.profiles.user.databases = [
-  #   {
-  #     settings = {
-  #       "org/gnome/mutter" = {
-  #         experimental-features = [
-  #           "scale-monitor-framebuffer" # Enables fractional scaling (125% 150% 175%)
-  #           "variable-refresh-rate" # Enables Variable Refresh Rate (VRR) on compatible displays
-  #           "xwayland-native-scaling" # Scales Xwayland applications to look crisp on HiDPI screens
-  #         ];
-  #       };
-  #     };
-  #   }
-  # ];
   
   # # Enable KDE
   # services.displayManager.sddm.enable = true;
@@ -140,21 +124,19 @@
     wowup-cf
     openrgb
     rclone
-    # gnome67
     libva-utils
     libvdpau
     vkbasalt
     dxvk
     protonplus
     protontricks
-    # vulkanPackages_latest.vulkan-extension-layer
-    # vulkanPackages_latest.vulkan-headers
     gamescope-wsi
     kdePackages.kdeplasma-addons
     # usbutils
     winetricks
     wineWow64Packages.waylandFull
     qbz
+    gnome-tweaks
   ];
   
   # Steam
