@@ -138,6 +138,8 @@
     qbz
     gnome-tweaks
     inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
+    gdctl
+    jq
   ];
   
   # Steam
