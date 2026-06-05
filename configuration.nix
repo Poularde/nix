@@ -132,7 +132,6 @@
     protontricks
     gamescope-wsi
     kdePackages.kdeplasma-addons
-    # usbutils
     winetricks
     wineWow64Packages.waylandFull
     qbz
