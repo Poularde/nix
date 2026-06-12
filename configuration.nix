@@ -106,6 +106,7 @@
       htop
       git
       vscode
+      firefox
     ];
   };
   # Allow unfree packages
