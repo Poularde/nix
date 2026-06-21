@@ -138,7 +138,6 @@
     qbz
     gnome-tweaks
     gnome-randr
-    inputs.scopebuddy.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   
   # Steam
