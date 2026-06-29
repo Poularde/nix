@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  system.boot.loader.kernelFile = "vmlinuz";
 
   # Linux Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -133,7 +134,7 @@
     protonplus
     protontricks
     gamescope-wsi
-    kdePackages.kdeplasma-addons
+    # kdePackages.kdeplasma-addons
     winetricks
     wineWow64Packages.waylandFull
     qbz
