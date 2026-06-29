@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  system.boot.loader.kernelFile = "vmlinuz";
+  system.boot.loader.kernelFile = "vmlinuz"; #workaround for zen kernel to build correctly
 
   # Linux Kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
