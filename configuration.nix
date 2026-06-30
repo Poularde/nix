@@ -127,6 +127,7 @@
     wowup-cf
     openrgb
     rclone
+    libva
     libva-utils
     libvdpau
     vkbasalt
