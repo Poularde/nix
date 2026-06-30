@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      (fetchGit { url = "https://github.com/anthonyroussel/shadow-nix"; ref = "refs/tags/v1.5.0"; } + "/import/system.nix")
     ];
 
   # Bootloader.
@@ -165,16 +166,12 @@
   };
 
   # Shadow Client
-  {
-  imports = [
-      (fetchGit { url = "https://github.com/anthonyroussel/shadow-nix"; ref = "refs/tags/v1.5.0"; } + "/import/system.nix")
-    ];
-    programs.shadow-client = {
-      # Enabled by default when using import
-      # enable = true;
-      channel = "prod";
-    };
-  }
+  programs.shadow-client = {
+    # Enabled by default when using import
+    # enable = true;
+    channel = "prod";
+  };
+
   # UDEV rules for OpenRGB
   services.hardware.openrgb.enable = true;
 
