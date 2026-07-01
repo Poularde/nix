@@ -132,6 +132,7 @@
     libva
     libva-utils
     libvdpau
+    libvdpau-va-gl
     vkbasalt
     dxvk
     protonplus
