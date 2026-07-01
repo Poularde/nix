@@ -128,7 +128,7 @@
     wowup-cf
     openrgb
     rclone
-    libva-nvidia-driver
+    nvidia-vaapi-driver
     libva-utils
     libvdpau
     vkbasalt
