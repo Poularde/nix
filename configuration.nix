@@ -2,13 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, home-manager, chaotic, ... }:
+{ config, pkgs, inputs, home-manager, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      (fetchGit { url = "https://github.com/anthonyroussel/shadow-nix"; ref = "main"; } + "/import/system.nix")
+      # (fetchGit { url = "https://github.com/anthonyroussel/shadow-nix"; ref = "main"; } + "/import/system.nix")
     ];
 
   # Bootloader.
@@ -128,7 +128,7 @@
     wowup-cf
     openrgb
     rclone
-    libva
+    libva-nvidia-driver
     libva-utils
     libvdpau
     vkbasalt
@@ -165,12 +165,12 @@
     binfmt = true;
   };
 
-  # Shadow Client
-  programs.shadow-client = {
-    # Enabled by default when using import
-    # enable = true;
-    channel = "prod";
-  };
+  # # Shadow Client
+  # programs.shadow-client = {
+  #   # Enabled by default when using import
+  #   # enable = true;
+  #   channel = "prod";
+  # };
 
   # UDEV rules for OpenRGB
   services.hardware.openrgb.enable = true;
