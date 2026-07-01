@@ -129,6 +129,7 @@
     openrgb
     rclone
     nvidia-vaapi-driver
+    libva
     libva-utils
     libvdpau
     vkbasalt
