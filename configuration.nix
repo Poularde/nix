@@ -14,6 +14,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 5; # Limit the number of boot entries to keep in the EFI System Partition.
   # system.boot.loader.kernelFile = "vmlinuz"; #workaround for zen kernel to build correctly
 
   # Linux Kernel
@@ -274,12 +275,4 @@
 
   # TeamViewer
   #services.teamviewer.enable = true;
-
-  # Garbage colelctor to cleanup old generations
-  nix.gc = {
-  automatic = true;
-  persistent = true;
-  dates = "22:00:00";  # Schedule garbage collection at 5 AM
-  options = "--delete-older-than 30d";  # Delete generations older than 7 days
-  };
 }
