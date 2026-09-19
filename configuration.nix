@@ -142,7 +142,7 @@
     # kdePackages.kdeplasma-addons
     winetricks
     wineWow64Packages.waylandFull
-    qbz
+    # qbz
     gnome-tweaks
     gnome-randr
   ];
