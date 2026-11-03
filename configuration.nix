@@ -150,7 +150,8 @@
   
   #yubi
   services.pcscd.enable = true;
-  
+  services.udev.packages = [ pkgs.yubikey-personalization ];
+
   # Steam
   programs.steam = {
     enable = true;
