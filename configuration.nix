@@ -145,6 +145,7 @@
     # qbz
     gnome-tweaks
     gnome-randr
+    yubioath-flutter
   ];
   
   # Steam
