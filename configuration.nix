@@ -148,6 +148,9 @@
     yubioath-flutter
   ];
   
+  #yubi
+  services.pcscd.enable = true;
+  
   # Steam
   programs.steam = {
     enable = true;
