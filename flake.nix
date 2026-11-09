@@ -12,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, chaotic, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, chaotic, home-manager, brave, ... }@inputs: 
     let
       inherit (self) outputs;
       system = "x86_64-linux";

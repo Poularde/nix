@@ -147,6 +147,12 @@
     gnome-randr
     yubioath-flutter
   ];
+
+  #Brave
+  lib.nixosSystem {
+    system = "...";
+    modules = [brave.nixosModules.default];
+  };
   
   #yubi
   services.pcscd.enable = true;
