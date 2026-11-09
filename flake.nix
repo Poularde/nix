@@ -27,6 +27,7 @@
           # so the old configuration file still takes effect
           ./configuration.nix
           chaotic.nixosModules.default
+          brave.nixosModules.default
         ];
       };
       homeConfigurations = {
