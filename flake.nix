@@ -5,7 +5,6 @@
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    brave.url = "git+https://codeberg.org/buckley310/brave-browser-nix?ref=main";
     home-manager = {
       url = github:nix-community/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +26,6 @@
           # so the old configuration file still takes effect
           ./configuration.nix
           chaotic.nixosModules.default
-          brave.nixosModules.default
         ];
       };
       homeConfigurations = {
